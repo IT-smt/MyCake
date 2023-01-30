@@ -27,9 +27,12 @@ body {
 	}
 
 	&__block-1 {
+		display: flex;
+		align-items: center;
 	}
 
 	&__logo {
+		display: block;
 		font-family: "Yeseva One";
 		font-size: 35px;
 		line-height: 120%;
@@ -38,6 +41,7 @@ body {
 	}
 
 	&__map {
+		display: block;
 		font-family: "Verdana";
 		font-weight: 700;
 		font-size: 16px;
@@ -86,6 +90,7 @@ body {
 	}
 }
 .nav {
+	display: block;
 	& ul {
 		display: flex;
 		align-items: center;
@@ -100,8 +105,257 @@ body {
 	}
 
 	&__link a {
+		display: block;
 		font-size: 18px;
 		line-height: 120%;
 		color: #011936;
+	}
+}
+
+.content {
+	margin: 40px 0 80px 0;
+	&__welcome {
+		margin: 0px 0px 80px 0px;
+	}
+
+	&__cakes {
+		margin: 0px 0px 80px 0px;
+	}
+
+	&__cupcakes {
+		margin: 0px 0px 80px 0px;
+	}
+
+	&__register {
+		margin: 0px 0px 80px 0px;
+	}
+
+	&__confectioners {
+		margin: 0px 0px 80px 0px;
+	}
+}
+.welcome {
+	&__row {
+		display: flex;
+	}
+
+	&__block-1 {
+		margin: 49px 80px 0px 0px;
+	}
+
+	&__title {
+		max-width: 463px;
+		font-family: "Yeseva One";
+		font-weight: 400;
+		font-size: 42px;
+		line-height: 120%;
+		color: #011936;
+		margin: 0px 0px 15px 0px;
+	}
+
+	&__subtitle {
+		max-width: 463px;
+		font-size: 16px;
+		line-height: 24px;
+		color: #43607c;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__search {
+		margin: 0px 0px 30px 0px;
+		display: flex;
+	}
+	&__search input {
+		flex: 1 1 auto;
+		display: block;
+		border: 1px solid #dfdfdf;
+		border-radius: 5px 0px 0px 5px;
+		padding: 8px 20px 18px 20px;
+		font-size: 16px;
+		line-height: 24px;
+		color: #43607c;
+	}
+	&__search button {
+		flex: 0 0 auto;
+		display: block;
+		padding: 14px 30px;
+		background: #fdad6d;
+		border: 1px solid #fdad6d;
+		border-radius: 0px 5px 5px 0px;
+		font-size: 18px;
+		line-height: 120%;
+		color: #8e4a4e;
+	}
+
+	&__fast-search {
+		margin: 0px 0px 60px 0px;
+	}
+
+	&__slider {
+		display: flex;
+		max-width: 846px;
+		min-width: 846px;
+		overflow: hidden;
+	}
+
+	&__arrows {
+		display: flex;
+		justify-content: end;
+		margin: 0px 0px 15px 0px;
+	}
+
+	&__arrows img {
+		cursor: pointer;
+		display: block;
+	}
+
+	&__arrows img:first-child {
+		padding: 6px 8.6px 6px 8px;
+		margin: 0px 5px 0px 0px;
+	}
+
+	&__arrows img:last-child {
+		padding: 6px 8px 6px 8.6px;
+	}
+
+	&__slides {
+		display: flex;
+		transform: translateX(0px);
+		transition: all 1s ease 0s;
+	}
+
+	&__slide {
+	}
+
+	&__block-2 {
+	}
+
+	&__images {
+	}
+}
+.fast-search {
+	&__block-1 {
+		display: flex;
+		margin: 0px 0px 10px 0px;
+	}
+	&__block-1 a {
+		display: block;
+		padding: 8.5px 20px;
+		font-size: 16px;
+		line-height: 120%;
+		color: #8e4a4e;
+		margin: 0px 10px 0px 0px;
+		background: #fff2f2;
+		border-radius: 40px;
+	}
+	&__block-1 a:last-child {
+		margin: 0;
+	}
+
+	&__block-2 {
+		display: flex;
+		margin: 0px 0px 10px 0px;
+	}
+	&__block-2 a {
+		display: block;
+		padding: 8.5px 20px;
+		font-size: 16px;
+		line-height: 120%;
+		color: #8e4a4e;
+		margin: 0px 10px 0px 0px;
+		background: #fff2f2;
+		border-radius: 40px;
+	}
+	&__block-2 a:last-child {
+		margin: 0;
+	}
+
+	&__block-3 {
+		display: flex;
+	}
+	&__block-3 a {
+		display: block;
+		padding: 8.5px 20px;
+		font-size: 16px;
+		line-height: 120%;
+		color: #8e4a4e;
+		margin: 0px 10px 0px 0px;
+		background: #fff2f2;
+		border-radius: 40px;
+	}
+	&__block-3 div {
+		position: relative;
+	}
+	&__block-3 div > a {
+		cursor: pointer;
+		display: block;
+		margin: 0 0 0 0;
+		padding: 8.5px 45px 8.5px 20px;
+	}
+	&__block-3 div > a::after {
+		content: url(../../img/icons/arrow-down.svg);
+		display: block;
+		position: absolute;
+		right: 25px;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 0.1s ease 0s;
+	}
+
+	&__block-3 div > a.active::after {
+		top: 58%;
+		transform: translateY(-50%) rotate(180deg);
+	}
+
+	&__block-3 div ul {
+		display: none;
+		position: absolute;
+		z-index: 2;
+		margin: 10px 0px 0px 0px;
+		width: 100%;
+		padding: 8.5px 8px;
+		background: #fff2f2;
+		border-radius: 25px;
+		overflow-wrap: break-word;
+	}
+	&__block-3 div ul.active {
+		display: block;
+	}
+	&__block-3 div ul li a {
+		display: block;
+		font-size: 16px;
+		line-height: 120%;
+		color: #8e4a4e;
+	}
+}
+.slide {
+	margin: 0px 20px 0px 0px;
+	&__image {
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+		color: #43607c;
+		text-align: center;
+	}
+}
+.images {
+	display: flex;
+
+	&__block-1 img:first-child {
+		margin: 0px 0px 20px 0px;
+		border-radius: 0px 70px 70px 0px;
+	}
+
+	&__block-1 img:last-child {
+		border: 1px solid #fff2f2;
+		border-radius: 0px 70px;
+	}
+
+	&__block-2 img {
+		border-radius: 100px 0px;
 	}
 }

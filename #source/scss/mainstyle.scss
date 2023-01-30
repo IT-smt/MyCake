@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Yeseva+One&display=swap");
+@import "fonts";
+@import "nullstyle.scss";
+
+body {
+	font-family: "Verdana";
+	font-weight: 400;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+.container {
+	max-width: 1472px;
+	margin: 0 5px;
+	margin: 0 auto;
+}
+.header {
+	background: #ffffff;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 20px 0;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__block-1 {
+	}
+
+	&__logo {
+		font-family: "Yeseva One";
+		font-size: 35px;
+		line-height: 120%;
+		color: #011936;
+		margin: 0px 84px 0px 0px;
+	}
+
+	&__map {
+		font-family: "Verdana";
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 120%;
+		color: #8e4a4e;
+		position: relative;
+	}
+
+	&__map::before {
+		content: url(../../img/icons/map.svg);
+		position: absolute;
+		left: -29px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__block-2 {
+	}
+
+	&__nav {
+	}
+
+	&__block-3 {
+		display: flex;
+		align-items: center;
+	}
+
+	&__message {
+		margin: 0px 70px 0px 0px;
+	}
+
+	&__profile {
+		display: block;
+		font-size: 16px;
+		line-height: 120%;
+		color: #43607c;
+		position: relative;
+	}
+
+	&__profile::before {
+		content: url(../../img/icons/profile.svg);
+		position: absolute;
+		left: -37.5px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.nav {
+	& ul {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		margin: 0px 30px 0px 0px;
+	}
+
+	&__link:last-child {
+		margin: 0;
+	}
+
+	&__link a {
+		font-size: 18px;
+		line-height: 120%;
+		color: #011936;
+	}
+}

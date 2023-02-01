@@ -129,3 +129,109 @@ function SlideScroll2(event) {
 
 
 setInterval(() => SlideScroll2('right'), 5000)
+
+
+
+
+
+
+
+
+
+
+const arrowLeft3 = document.querySelector('#arrowLeft3')
+const arrowRight3 = document.querySelector('#arrowRight3')
+const slides3 = document.querySelectorAll('.confectioners__slides')
+const slidesCount3 = document.querySelectorAll('.confectioners__slides').length
+
+let activeSlideIndex3 = 0
+
+arrowLeft3.addEventListener('click', () => {
+	SlideScroll3('left')
+})
+arrowRight3.addEventListener('click', () => {
+	SlideScroll3('right')
+})
+
+
+function SlideScroll3(event) {
+	if (event === 'right') {
+		activeSlideIndex3++
+		if (activeSlideIndex3 === slidesCount3) {
+			activeSlideIndex3 = 0
+		}
+	} else if (event === 'left') {
+		activeSlideIndex3--
+		if (activeSlideIndex3 < 0) {
+			activeSlideIndex3 = slidesCount3 - 1
+		}
+	}
+
+	width = slides3[activeSlideIndex3].clientWidth
+
+	slides3.forEach(slide => {
+		slide.style.transform = `translateX(-${activeSlideIndex3 * width}px)`
+	})
+}
+
+
+setInterval(() => SlideScroll3('right'), 5000)
+
+
+
+
+
+
+
+
+
+
+
+const arrowLeft4 = document.querySelector('#arrowLeft4')
+const arrowRight4 = document.querySelector('#arrowRight4')
+const slides4 = document.querySelectorAll('.articles__slides')
+const slidesCount4 = document.querySelectorAll('.articles__slides').length
+
+let activeSlideIndex4 = 0
+
+arrowLeft4.addEventListener('click', () => {
+	SlideScroll4('left')
+})
+arrowRight4.addEventListener('click', () => {
+	SlideScroll4('right')
+})
+
+
+function SlideScroll4(event) {
+	if (event === 'right') {
+		activeSlideIndex4++
+		if (activeSlideIndex4 === slidesCount4) {
+			activeSlideIndex4 = 0
+		}
+	} else if (event === 'left') {
+		activeSlideIndex4--
+		if (activeSlideIndex4 < 0) {
+			activeSlideIndex4 = slidesCount4 - 1
+		}
+	}
+
+	width = slides4[activeSlideIndex4].clientWidth
+
+	slides4.forEach(slide => {
+		slide.style.transform = `translateX(-${activeSlideIndex4 * width}px)`
+	})
+}
+
+
+setInterval(() => SlideScroll4('right'), 5000)
+
+
+
+
+
+const profile = document.querySelector('.header__profile');
+const menu = document.querySelector('.profile__menu');
+
+profile.addEventListener('click', () => {
+	menu.classList.toggle('active');
+});
